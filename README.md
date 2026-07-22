@@ -119,4 +119,4 @@ Contributions welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). The core log
 
 ## License
 
-MIT © [Your Name]
+MIT © [azdevcomp]
