@@ -1,0 +1,42 @@
+{
+  "name": "envguard",
+  "version": "1.0.0",
+  "description": "Detect missing, extra or misconfigured environment variables by comparing .env to .env.example — before your app crashes.",
+  "bin": {
+    "envguard": "./bin/envguard.js"
+  },
+  "main": "./lib/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "env",
+    "dotenv",
+    "environment-variables",
+    "cli",
+    "devtools",
+    "developer-experience",
+    "config",
+    "validation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/envguard.git"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/envguard#readme",
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/envguard/issues"
+  }
+}
