@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/envguard.git"
+    "url": "git+https://github.com/azdevcomp/envguard.git"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/envguard#readme",
+  "homepage": "https://github.com/azdevcomp/envguard#readme",
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/envguard/issues"
+    "url": "https://github.com/azdevcomp/envguard/issues"
   }
 }
