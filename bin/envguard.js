@@ -34,7 +34,7 @@ ${c.bold('.env.example hints')}
     DATABASE_URL=postgres://user:pass@host:5432/db # pattern:^postgres://
     PORT=3000
 
-Docs & contributing: https://github.com/YOUR_USERNAME/envguard
+Docs & contributing: https://github.com/azdevcomp/envguard
 `;
 
 function parseArgs(argv) {
