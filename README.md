@@ -7,24 +7,25 @@
 **Stop losing 20 minutes to a missing environment variable.**
 
 `envguard` compares your `.env` to `.env.example` and tells you exactly what's missing, empty, or malformed — before your app crashes with a cryptic error.
+
+```
 $ envguard check
 
-envguard check (.env vs .env.example)
+envguard check  (.env vs .env.example)
 
 ✖ Missing (1)
-
-STRIPE_SECRET_KEY
+  - STRIPE_SECRET_KEY
 
 ⚠ Invalid format (1)
-
-PORT (expected to match ^[0-9]+$)
+  - PORT (expected to match ^[0-9]+$)
 
 ℹ Not documented in .env.example (1)
-
-LEGACY_FLAG
-(not a failure — just letting you know)
+  - LEGACY_FLAG
+  (not a failure — just letting you know)
 
 ✖ .env is out of sync
+```
+
 ## The problem
 
 A teammate adds a new required variable to `.env.example` and forgets to tell anyone. You pull the latest code, run the app, and get a wall of stack traces. Ten minutes later you realize you're missing `STRIPE_WEBHOOK_SECRET`. This happens in nearly every team, every week.
