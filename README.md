@@ -1,27 +1,30 @@
 # envguard
 
+[![npm version](https://img.shields.io/npm/v/@azdevcomp/envguard.svg)](https://www.npmjs.com/package/@azdevcomp/envguard)
+[![CI](https://github.com/azdevcomp/envguard/actions/workflows/ci.yml/badge.svg)](https://github.com/azdevcomp/envguard/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 **Stop losing 20 minutes to a missing environment variable.**
 
 `envguard` compares your `.env` to `.env.example` and tells you exactly what's missing, empty, or malformed — before your app crashes with a cryptic error.
-
-```
 $ envguard check
 
-envguard check  (.env vs .env.example)
+envguard check (.env vs .env.example)
 
 ✖ Missing (1)
-  - STRIPE_SECRET_KEY
+
+STRIPE_SECRET_KEY
 
 ⚠ Invalid format (1)
-  - PORT (expected to match ^[0-9]+$)
+
+PORT (expected to match ^[0-9]+$)
 
 ℹ Not documented in .env.example (1)
-  - LEGACY_FLAG
-  (not a failure — just letting you know)
+
+LEGACY_FLAG
+(not a failure — just letting you know)
 
 ✖ .env is out of sync
-```
-
 ## The problem
 
 A teammate adds a new required variable to `.env.example` and forgets to tell anyone. You pull the latest code, run the app, and get a wall of stack traces. Ten minutes later you realize you're missing `STRIPE_WEBHOOK_SECRET`. This happens in nearly every team, every week.
@@ -33,19 +36,19 @@ A teammate adds a new required variable to `.env.example` and forgets to tell an
 No install needed:
 
 ```bash
-npx envguard check
+npx @azdevcomp/envguard check
 ```
 
 Or add it to your project:
 
 ```bash
-npm install --save-dev envguard
+npm install --save-dev @azdevcomp/envguard
 ```
 
 Or install globally:
 
 ```bash
-npm install -g envguard
+npm install -g @azdevcomp/envguard
 ```
 
 ## Usage
@@ -83,7 +86,7 @@ PORT=3000                                       # pattern:^[0-9]+$
 ```json
 {
   "scripts": {
-    "postinstall": "envguard check || true"
+    "postinstall": "npx @azdevcomp/envguard check || true"
   }
 }
 ```
@@ -93,14 +96,14 @@ PORT=3000                                       # pattern:^[0-9]+$
 **2. Add it as a pre-commit hook** (e.g. with [husky](https://github.com/typicode/husky)):
 
 ```bash
-npx husky add .husky/pre-commit "npx envguard check"
+npx husky add .husky/pre-commit "npx @azdevcomp/envguard check"
 ```
 
 **3. Add it to CI:**
 
 ```yaml
 - name: Check env sync
-  run: npx envguard check
+  run: npx @azdevcomp/envguard check
 ```
 
 ## Why not just use Doppler / Vault / Dependabot-style tools?
@@ -119,4 +122,4 @@ Contributions welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). The core log
 
 ## License
 
-MIT © [azdevcomp]
+MIT © [Aziz](https://github.com/azdevcomp)
