@@ -1,6 +1,6 @@
 {
   "name": "@azdevcomp/envguard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect missing, extra or misconfigured environment variables by comparing .env to .env.example — before your app crashes.",
   "bin": {
     "envguard": "./bin/envguard.js"
